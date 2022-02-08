@@ -72,10 +72,16 @@ while calc_run == True:
     print("Nice try.")
     valid_num2 = False
   while valid_num2 == False:
-    num2 = float(input("Enter your second number: "))
-    
-    if not ValueError:
+    # num2 = float(input("Enter your second number: "))
+    try:
+      num2 = float(input("Enter your second number: ")) 
       valid_num2 = True
+    except ValueError:
+      print("Nice try.")
+      valid_num2 = False
+      continue
+    # if not ValueError:
+    #   valid_num2 = True
     
   # num2 = float(input("Enter your second number: "))
   
